@@ -23,5 +23,5 @@ public class Problema119 {
 		}
 		return escudos;
 	}
-
+	
 }
