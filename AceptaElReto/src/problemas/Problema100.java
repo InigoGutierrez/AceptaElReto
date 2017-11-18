@@ -6,6 +6,8 @@ package problemas;
  * Para la propia constante de Kaprekar deberá indicar 0.
  */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class Problema100 {
@@ -15,23 +17,29 @@ public class Problema100 {
 		int counter;
 		final String KAPREKAR_STRING = "6174";
 		
-		for ( String arg: args ) {
-			//System.out.println("Input: " + arg);
-			if ( arg.equals(KAPREKAR_STRING) ) {
-				System.out.println(0);
-			}
-			else {
-				counter = 0;
-				while ( !arg.equals(KAPREKAR_STRING) && counter < 8 ) {
-					arg = nextKaprekar(arg);
-					counter++;
-					//System.out.println("Iteration " + counter + ": " + arg);
-				}
-				System.out.println(counter);
-			}
-			
-		}
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
+		try {
+			for ( int repeticiones = Integer.parseInt(in.readLine()); repeticiones > 0; repeticiones-- ) {
+				String arg = in.readLine();
+				//System.out.println("Input: " + arg);
+				if ( arg.equals(KAPREKAR_STRING) ) {
+					System.out.println(0);
+				}
+				else {
+					counter = 0;
+					while ( !arg.equals(KAPREKAR_STRING) && counter < 8 ) {
+						arg = nextKaprekar(arg);
+						counter++;
+						//System.out.println("Iteration " + counter + ": " + arg);
+					}
+					System.out.println(counter);
+				}
+				
+			}
+		} catch ( Exception e ) {
+			System.err.println(e.getMessage());
+		}
 	}
 
 	private static String nextKaprekar(String arg) {
