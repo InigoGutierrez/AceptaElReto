@@ -1,3 +1,4 @@
+package problemas;
 /*
  * Para cada caso de prueba, el programa indicará el número de vueltas
  * que se debe dar a la rutina de Kaprekar para alcanzar el 6174.
