@@ -13,6 +13,7 @@ public class Problema370 {
 			System.out.println(casoDePrueba(llave));
 		}
 	}
+	
 	public static String casoDePrueba(String llave) {
 		int calibreUno = Integer.parseInt(llave.substring(0, llave.indexOf('-')));
 		int calibreDos = Integer.parseInt(llave.substring(llave.indexOf('-') + 1));
