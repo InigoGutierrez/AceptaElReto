@@ -19,9 +19,9 @@ public class Problema402DimensionesDelPuzzle {
 	public static int casoDePrueba(int caso) {
 		int lado = (int) Math.sqrt(caso);
 		while ( caso % lado != 0 ) {
-			lado++;
+			lado--;
 		}
-		return lado;
+		return caso / lado;
 	}
 	
 	/*public static int findLowestNextDivisorInRange( int lado, int caso ) {
